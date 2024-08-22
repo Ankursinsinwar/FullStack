@@ -1,0 +1,48 @@
+/* *{
+margin: 0;
+padding: 0;
+} */
+
+h1{
+    color: cadetblue;
+}
+
+p{
+    /* color: linear-gradient(red, yellow); */
+    color:color-mix(in srgb-linear, rgb(193, 26, 239) 80%, rgb(0, 17, 255) 20%) ;
+}
+
+#p3{
+    color: coral;
+}
+
+.pc{
+    color: chartreuse;
+}
+
+
+a[href="../lec-2/form.html"]{
+    color: crimson;
+}
+
+
+a[href="../lec-3/time_table.html"]{
+    color: rgb(10, 206, 140);
+}
+
+
+a[href="../lec-4/files.html"]{
+    color: rgb(213, 174, 17);
+}
+
+
+a:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+
+div p{
+    color: rgb(108, 218, 248);
+}
