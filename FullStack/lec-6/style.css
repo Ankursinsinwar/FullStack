@@ -1,0 +1,16 @@
+.d1{
+    margin: auto;
+    padding: 30px;
+    width: 500px;
+    border: 2px solid red ;
+}
+
+
+
+.d2{
+    margin: auto;
+    margin-top: 1rem;
+    padding: 2vw;
+    width: 50vh;
+    border: 10px dashed yellow ;
+}
