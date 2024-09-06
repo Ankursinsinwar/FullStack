@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.nav-bar {
+    height: 3rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+.nav-bar a {
+    margin: 1rem;
+    color: white;
+}
+.logo {
+    width: 6rem;
+    height: 3.15rem;
+    background-color: rgb(4, 107, 107);
+    display: flex;
+    align-items: center;
+}
+
+
+.right{
+    display: flex;
+}
+
+.main {
+    width: 100%;
+    height: 95vh;
+    background-image: url('https://www.w3schools.com/w3images/sailboat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.teams{
+    margin: 6rem;
+
+}
+.teams h2 {
+    text-align: center;
+}
+.teams p {
+    text-align: center;
+}
+.img {
+    text-align: center;
+}
+.img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.team-person {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   margin:4rem;
+}
