@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+
+    display: grid;
+    grid-template-columns: 100px 200px 100px 300px ;
+    grid-template-rows: 50px 200px 100px 150px;
+
+    grid-template-areas:
+    "a1 a1 a1 a2 a2 a3 a3"
+    "a4 a4 a4 a2 a2 a3 a3"
+    "a4 a4 a4 a2 a2 a3 a3"
+    "a5 a5 a5 a5 a5 a5 a5"
+    "a5 a5 a5 a5 a5 a5 a5"
+    ;
+    
+    }
+
+.child{
+    border: 2px black solid;
+}
+
+
+
+.child1{
+    background-color:antiquewhite ;
+    grid-area: a1;
+}
+.child2{
+    background-color:aqua ;
+    grid-area: a2;
+}
+.child3{
+    background-color:greenyellow ;
+    grid-area: a3;
+}
+.child4{
+    background-color:beige ;
+    grid-area: a4;
+}
+.child5{
+    background-color:bisque ;
+    grid-area: a5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
