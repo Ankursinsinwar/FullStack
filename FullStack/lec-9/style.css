@@ -7,30 +7,24 @@ a{
     text-decoration: none;
 }
 .nav-bar {
+    width: 100vw;
     height: 3rem;
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content:space-between ;
     position: fixed;
-    left: 0;
-    right: 0;
 }
 .nav-bar a {
+    height: 3rem;
     margin: 1rem;
     color: white;
 }
 .logo {
-    width: 6rem;
-    height: 3.15rem;
+    width: 5rem;
+    height: 3rem;
     background-color: rgb(4, 107, 107);
     display: flex;
     align-items: center;
-}
-
-
-.right{
-    display: flex;
 }
 
 .main {
@@ -65,5 +59,36 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-   margin:4rem;
+    margin: 4rem;
+}
+
+.work-section {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+.work-content {
+    width: 25%;
+    margin: 0 1rem;
+    color: white;
+}
+.work-sample-1 {
+    width: 25%;
+    margin: 0 1rem;
+}
+.work-sample-2 {
+    width: 25%;
+    margin: 0 1rem;
+}
+.work-container {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    margin: 0;
+}
+.work-sample-3{
+    width: 25%;
+    margin: 0 1rem;
 }
