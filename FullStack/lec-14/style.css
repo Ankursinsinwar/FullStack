@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('./img/background-black.png');
+    animation-name: bbgMove;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes bbgMove {
+    100% {
+        background-position: -2000px 0;
+    }
+}
+
+.container {
+    height: 100vh;
+    /* border: 2px solid black; */
+    background-image: url('./img/space.png');
+    /* background-color: aqua; */
+    background-size: cover;
+    animation-name: bgMove;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgMove {
+    100% {
+        background-position: -10000px 0;
+    }
+}
+
+.rocket {
+    height: 200px;
+    width: 200px;
+    /* border: 2px solid red; */
+    transform: rotate(45deg);
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    animation: rocket 2s 3 linear, rotate 1s 9s forwards, launch 1s 10s forwards;
+    /* animation-duration: 2s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear; */
+
+
+}
+
+@keyframes rocket {
+
+    25% {
+        top: 30%;
+    }
+
+    50% {
+        top: 40%;
+    }
+
+    75% {
+        top: 50%;
+    }
+
+    100% {
+        top: 40%;
+
+    }
+
+
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(-45deg);
+
+    }
+}
+
+@keyframes launch{
+    100%{
+        top:-30%;
+    }
+}
+
+.rocket img {
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.cody {
+    height: 200px;
+    width: 200px;
+    /* border: 2px solid red; */
+    position: relative;
+    top: 40%;
+    left: -20%;
+    animation: cody 3s ease-in 6s;
+    /* animation-delay: 6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+     */
+}
+
+@keyframes cody {
+
+
+    0%{
+        left: -20%;
+    }   
+    50%{
+        left: 35%;
+    }
+    
+    100%{
+        left: 35%;
+        transform: scale(0.05);
+    }   
+
+}
+
+
+
+.cody img {
+    /* height: 100%; */
+    width: 100%;
+
+}
