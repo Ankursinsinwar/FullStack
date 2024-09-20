@@ -131,3 +131,75 @@ body{
     width: 100%;
 
 }
+
+
+
+@media (max-width:400px) {
+    
+
+    .rocket {
+        height: 70px;
+    width: 70px;
+        /* border: 2px solid red; */
+        top: 40%;
+        left: 20%;
+        animation: rocket 2s 3 linear, rotate 1s 9s forwards, launch 1s 10s forwards;
+        /* animation-duration: 2s;
+        animation-iteration-count: 3;
+        animation-timing-function: linear; */
+    
+    
+    }
+    
+
+
+    
+.cody {
+    height: 70px;
+    width: 70px;
+    left: -30%;
+    animation: cody 3s ease-in 6s;
+    /* animation-delay: 6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+     */
+}
+
+
+}
+
+
+
+@media  (min-width:401px) and (max-width:600px){
+    
+
+    .rocket {
+        height: 100px;
+    width: 100px;
+        /* border: 2px solid red; */
+        top: 40%;
+        left: 20%;
+        animation: rocket 2s 3 linear, rotate 1s 9s forwards, launch 1s 10s forwards;
+        /* animation-duration: 2s;
+        animation-iteration-count: 3;
+        animation-timing-function: linear; */
+    
+    
+    }
+    
+
+
+    
+.cody {
+    height: 100px;
+    width: 100px;
+    left: -50%;
+    animation: cody 3s ease-in 6s;
+    /* animation-delay: 6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+     */
+}
+
+
+}
