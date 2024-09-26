@@ -25,13 +25,14 @@
 
 
 
+
 ///////////////////  Object  //////////////////////////////
 
-var obj = {
-name : 'Ankur',
-age : 21,
-city : 'Mathura'
-}
+// var obj = {
+// name : 'Ankur',
+// age : 21,
+// city : 'Mathura'
+// }
 
 // console.log(obj);
 // console.log(obj.name);
@@ -39,9 +40,55 @@ city : 'Mathura'
 // console.log(obj.city);
 
 
-for( var i in obj){
-    console.log(i);
-    // console.log(obj.i);
-    console.log(obj[i]);
+// for( var i in obj){
+//     console.log(i);
+//     // console.log(obj.i);
+//     console.log(obj[i]);
 
+// }
+
+
+
+
+////////////////////////  function  //////////////////////////
+
+
+function fun1(){
+    console.log("Simpel function");
 }
+
+fun1();
+
+
+
+function fun2(){
+    console.log("asigning function to a variable");
+}
+
+var p = fun2;
+
+fun2();
+p();
+
+var x = function fun3(){
+    console.log("function in a variable: ", x);
+}
+
+x();
+
+
+var fun = ()=>{
+    var y = 10;
+    console.log("Arrow function :", fun);
+}
+
+fun();
+
+
+
+
+
+
+
+
+
