@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Search</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #dbeafe, #eef2ff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            outline: none;
+        }
+
+        .search button:hover {
+            background-color: #0056b3;
+        }
+
+        .output {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .emoji {
+            font-size: 32px;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .keywords {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Emoji Search</h1>
+    <div class="search">
+        <input type="text" id="input" placeholder="Search for emojis...">
+        <button id="search-button">🔍</button>
+    </div>
+    <div class="output" id="output"></div>
+
+    <script>
+        const output = document.getElementById("output");
+        const searchButton = document.getElementById('search-button');
+        const emojiInput = document.getElementById('input');
+
+        searchButton.addEventListener('click', () => {
+            const emoji = emojiInput.value.trim();
+            if (emoji) {
+                const URL = `https://exam-fawn-eight.vercel.app/emoji/${encodeURIComponent(emoji)}`;
+                fetchData(URL);
+            } else {
+                alert("Please enter an emoji name.");
+            }
+        });
+
+        function fetchData(URL) {
+            output.innerHTML = ''; // Clear previous results
+            fetch(URL)
+                .then((res) => res.json())
+                .then((data) => {
+                    data.forEach(e => {
+                        const card = document.createElement('div');
+                        card.classList.add('card');
+
+                        card.innerHTML = `
+                            <div class="emoji">${e.emoji}</div>
+                            <div class="name">${e.name}</div>
+                            <div class="keywords">${e.keywords.join(', ')}</div>
+                        `;
+
+                        output.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    output.innerHTML = `<p style="color:red;">Error fetching data. Please try again.</p>`;
+                });
+        }
+    </script>
+</body>
+
+</html>
