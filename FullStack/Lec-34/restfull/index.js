@@ -1,37 +1,40 @@
 const express = require('express');
 const app = express();
 
-const Users = require('./data/user');
-const e = require('express');
+const Users = require('./data/user')
 
 app.set('view engine','ejs');
-
-app.use(express.urlencoded({ extended: true }));
-
-
+app.use(express.urlencoded({extended:true}))
+ 
 app.get('/',(req,res)=>{
-    res.send('home page')
-});
-
+    res.send('HOME PAGE')
+})
 
 app.get('/users',(req,res)=>{
     res.render('user',{Users})
-});
-
+})
 
 app.get('/user/new',(req,res)=>{
-    res.render('new',{Users})
-});
+    res.render('new');
+})
 
 app.post('/users',(req,res)=>{
-    const {name,password,email,city} = req.body;
-    let user = {name,password,email,city};
+    const {username,email,city,password} = req.body;
+
+    let id = Users[Users.length-1].id +1;
+
+    const user = {id,username,password,city,email};
     Users.push(user);
-    res.redirect('/users')
-});
+    res.redirect('/users');
+})
 
+app.get('/users/:id',(req,res)=>{
+    const {id} = req.params;
 
-const port = 4000;
-app.listen(port,()=>{
-    console.log('Server is running on port', port);
+    let user = Users.find((user)=>user.id==id);
+    res.render('show',{user});
+})
+
+app.listen(4000,()=>{
+    console.log('server run at port 4000');
 })
