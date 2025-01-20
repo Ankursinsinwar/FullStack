@@ -1,39 +1,24 @@
 let Users = [
-    {
-        id:1,
-        name: 'John Doe',
-        email: 'johndoe@example.com',
-        password: '123',
-        city: 'New York'
+    {   id:1,
+        username:'ajay',
+        email:'ajay123@gmail.com',
+        password:'abcd123',
+        city:'Delhi India'
     },
-    {
+    {   
         id:2,
-        name: 'Jane Smith',
-        email: 'janesmith@example.com',
-        password: 'abc123',
-        city: 'Los Angeles'
+        username:'raj',
+        email:'raj@gmail.com',
+        password:'raj123',
+        city:'Kolkata India'
     },
     {
         id:3,
-        name: 'Robert Brown',
-        email: 'robertbrown@example.com',
-        password: 'pass456',
-        city: 'Chicago'
+        username:'rahul',
+        email:'rahul@gmail.com',
+        password:'rahul 123',
+        city:'Mumbai India'
     },
-    {
-        id:4,
-        name: 'Emily Davis',
-        email: 'emilydavis@example.com',
-        password: 'emily789',
-        city: 'Houston'
-    },
-    {
-        id:5,
-        name: 'Michael Johnson',
-        email: 'michaeljohnson@example.com',
-        password: 'mike123',
-        city: 'Phoenix'
-    }
 ];
 
 module.exports = Users;

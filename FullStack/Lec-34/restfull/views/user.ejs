@@ -14,14 +14,17 @@
 <body>
     <a href="/user/new">Create new user</a>
     <div class="container">
-        <% for(let user of Users){ %>
-            <div class="box">
-                <p><%=user.username%></p>
-                <p><%=user.email%></p>
-                <p><%=user.city%></p>
-                <a href="/users/<%= user.id %>">Show</a>
-                <a href="/users/<%= user.id %>/edit">Edit</a>
-            </div>
+       <% for(let user of Users){ %>
+             <div class="box">
+                <p><%= user.username %></p>
+                <p><%= user.email %></p>
+                <p><%= user.city %></p>
+                <a href="users/<%=user.id%>">Show</a>
+                <a href="users/<%=user.id%>/edit">Edit</a>
+                <form action="/users/<%= user.id%>/delete" method="post">
+                    <button>Delete</button>
+                </form>
+             </div>
        <% } %>
     </div>
 </body>
