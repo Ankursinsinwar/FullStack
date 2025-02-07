@@ -13,15 +13,30 @@ const readFileContent = (filePath) => {
     });
 };
 
+//    option 1
+// Promise.all([readFileContent(file1), readFileContent(file2)])
+//     .then(([content1, content2]) => {
+//         let mergedContent = [...content1, ...content2];
+//         console.log("Original File Content:");
+//         console.log(mergedContent.join('  | '));
 
-Promise.all([readFileContent(file1), readFileContent(file2)])
-    .then(([content1, content2]) => {
-        let mergedContent = [...content1, ...content2];
-        console.log("Original File Content:");
-        console.log(mergedContent.join('  | '));
+//         let sortedContent = mergedContent.sort((a, b) => a - b);
+//         console.log("\nSorted File Content:");
+//         console.log(sortedContent.join('  | '));
+//     })
+//     .catch(error => console.error(error));
 
-        let sortedContent = mergedContent.sort((a, b) => a - b);
-        console.log("\nSorted File Content:");
-        console.log(sortedContent.join('  | '));
-    })
-    .catch(error => console.error(error));
+
+
+
+// option 2
+async function output(){
+    let data1 =  await readFileContent(file1);
+    let data2 =  await readFileContent(file2);
+
+    let finalArr = [...data1,...data2]
+    let outputArr = finalArr.sort((a, b) => a - b);
+    outputArr.join('\r \n');
+    console.log(outputArr);
+}
+output();
