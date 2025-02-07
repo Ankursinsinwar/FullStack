@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-let file1 = path.join(__dirname, 'data', 'index1.txt');
-let file2 = path.join(__dirname, 'data', 'index2.txt');
+let file1 = path.join(__dirname, 'data', 'input1.txt');
+let file2 = path.join(__dirname, 'data', 'input2.txt');
 
 const readFileContent = (filePath) => {
     return new Promise((resolve, reject) => {
@@ -18,10 +18,10 @@ Promise.all([readFileContent(file1), readFileContent(file2)])
     .then(([content1, content2]) => {
         let mergedContent = [...content1, ...content2];
         console.log("Original File Content:");
-        console.log(mergedContent.join('   '));
+        console.log(mergedContent.join('  | '));
 
         let sortedContent = mergedContent.sort((a, b) => a - b);
         console.log("\nSorted File Content:");
-        console.log(sortedContent.join('   '));
+        console.log(sortedContent.join('  | '));
     })
     .catch(error => console.error(error));
